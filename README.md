@@ -21,15 +21,42 @@ TODO explanation. txd on only if serial enabled. command for enabling serial ( `
 
 ## Compiling
 
-TODO
+> **Note**: these instructions are useful if you want to compile the software manually, but you don't necessarily have to. If you just want to install it on your Raspberry Pi, then go to the [Installation](#installation) section.
+
+> **Note**: this has been tested on a fresh installation of [**Raspberry Pi OS Lite**](https://www.raspberrypi.org/software/operating-systems/).
+
+First of all, update the APT package lists:
 
 ```bash
-./compile.sh
+sudo apt update
 ```
+
+Install **Git** and the **WiringPi** library:
+
+```bash
+sudo apt install git wiringpi
+```
+
+Clone this repo to your *Raspberry Pi* device and `cd` into the folder:
+
+```bash
+git clone https://github.com/dmotte/raspi-safe-shutdown.git
+cd raspi-safe-shutdown
+```
+
+Compile the `main.cpp` file with the **G++** compiler:
+
+```bash
+g++ -Wall -o raspi-safe-shutdown main.cpp -lwiringPi
+```
+
+The result of the compilation is the `raspi-safe-shutdown` executable file.
 
 ## Installation
 
 TODO
+
+TODO Warning: Always examine scripts downloaded from the internet before running them locally.
 
 ```bash
 ./install.sh

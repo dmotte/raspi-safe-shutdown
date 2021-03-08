@@ -1,0 +1,10 @@
+[Unit]
+Description=raspi-safe-shutdown
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/raspi-safe-shutdown
+
+[Install]
+WantedBy=multi-user.target
