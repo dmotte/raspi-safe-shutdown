@@ -21,12 +21,12 @@ apt-get update
 apt-get install wiringpi
 
 echo "Downloading raspi-safe-shutdown binary..."
-curl -o "/opt/raspi-safe-shutdown" \
+curl -Lo "/opt/raspi-safe-shutdown" \
 	https://github.com/dmotte/raspi-safe-shutdown/releases/latest/download/raspi-safe-shutdown
 chmod +x "/opt/raspi-safe-shutdown"
 
 echo "Downloading the raspi-safe-shutdown systemctl service file..."
-curl -o "/etc/systemd/system/raspi-safe-shutdown.service" \
+curl -Lo "/etc/systemd/system/raspi-safe-shutdown.service" \
 	https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/raspi-safe-shutdown.service
 
 echo "Enabling raspi-safe-shutdown service at startup..."
