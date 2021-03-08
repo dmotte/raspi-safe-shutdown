@@ -13,7 +13,7 @@ fi
 
 echo "Installing the required APT packages"
 apt-get update
-apt-get install wiringpi
+apt-get install -y wiringpi
 
 echo "Downloading the raspi-safe-shutdown systemctl service file"
 curl -Lo "/etc/systemd/system/raspi-safe-shutdown.service" \
