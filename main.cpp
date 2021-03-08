@@ -1,3 +1,4 @@
+#include <iostream>
 #include <stdlib.h>
 #include <wiringPi.h>
 
@@ -12,6 +13,9 @@ using namespace std;
 
 int main()
 {
+	cout << "raspi-safe-shutdown started." << endl;
+	cout << "Waiting for the user to press the shutdown button..." << endl;
+
 	wiringPiSetup();
 
 	pinMode(SHUTDOWN_BTN, INPUT);
