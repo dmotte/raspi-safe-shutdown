@@ -11,11 +11,6 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
-if [[ -f "/opt/raspi-safe-shutdown" ]]; then
-	echo "raspi-safe-shutdown is already installed" 1>&2
-	exit 1
-fi
-
 # Install the required APT packages
 apt-get update
 apt-get install wiringpi
