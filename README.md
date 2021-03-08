@@ -56,7 +56,7 @@ The result of the compilation is the `raspi-safe-shutdown` executable file.
 
 > :warning: **Warning**: Always examine scripts downloaded from the internet before running them locally.
 
-To install *raspi-safe-shutdown* into your Raspberry Pi, connect it to the internet and execute the following command:
+To install or update *raspi-safe-shutdown* into your Raspberry Pi, connect it to the internet and execute the following command:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/get.sh | sudo bash
