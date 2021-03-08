@@ -8,6 +8,15 @@ Simple daemon service application for *Raspberry Pi* to handle a **safe shutdown
 
 :warning: **Disclaimer**: I am not responsible for any possible damage you may cause to your boards.
 
+## Demo
+
+Demonstration video:
+
+<video width="100%" controls>
+    <source src="demo.mp4">
+    <a href="https://dmotte.github.io/raspi-safe-shutdown/#demo" target="_blank">Watch it on GitHub Pages</a>
+</video>
+
 ## Circuit
 
 To use this application you just need to connect two components to your Raspberry Pi via GPIO: an **LED** and a **button**. However, I also find very useful to know when the board is powered and when the operating system is running. This can be achieved by connecting two more LEDs.
@@ -41,15 +50,6 @@ curl -sSL https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/get.
 ```
 
 This will automatically download the latest version of this software and install a **systemctl** service for running it in the background.
-
-## Demo
-
-Demonstration video:
-
-<video width="100%" controls>
-    <source src="demo.mp4">
-    <a href="https://dmotte.github.io/raspi-safe-shutdown/#demo" target="_blank">Watch it on GitHub Pages</a>
-</video>
 
 ## Compiling
 
