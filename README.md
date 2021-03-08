@@ -31,10 +31,16 @@ The ideal scenario is therefore the following:
 - The **green LED** (optional) should be connected to the `UART0_TXD` pin (`BCM #14`)
   - it is ON only when the operating system is up and running
 
-To make the green LED work as explained, you need to have **Serial communication** enabled on the Raspberry Pi. To do this, log in and execute the following command:
+To make the (optional) green LED work as explained, you need to have **Serial communication** enabled on the Raspberry Pi. To enable it, log in and execute the following command:
 
 ```bash
 sudo raspi-config nonint do_serial 0
+```
+
+Then reboot the Raspberry Pi to make the changes effective:
+
+```bash
+sudo reboot
 ```
 
 ![Circuit diagram](circuit_bb.png)
@@ -49,7 +55,7 @@ To install or update *raspi-safe-shutdown* into your Raspberry Pi, connect it to
 curl -sSL https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/get.sh | sudo bash
 ```
 
-This will automatically download the latest version of this software and install a **systemctl** service for running it in the background.
+This will automatically download the latest version of this application and install a **systemctl** service for running it in the background.
 
 ## Compiling
 
