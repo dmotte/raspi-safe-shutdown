@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
 	cout << "raspi-safe-shutdown started." << endl;
-	cout << "Waiting for the user to press the shutdown button..." << endl;
+	cout << "Waiting for the user to press the shutdown button" << endl;
 
 	wiringPiSetup();
 
@@ -28,7 +28,9 @@ int main()
 		// If the user pressed the button
 		if (digitalRead(SHUTDOWN_BTN))
 		{
-			// Wait T_HOLD ms
+			cout << "Button pressed. Waiting " << T_HOLD << " milliseconds..."
+				 << endl;
+
 			digitalWrite(SHUTDOWN_LED, 1);
 			delay(T_HOLD);
 			digitalWrite(SHUTDOWN_LED, 0);
@@ -36,6 +38,8 @@ int main()
 			// If, after T_HOLD ms, the button is still pressed
 			if (digitalRead(SHUTDOWN_BTN))
 			{
+				cout << "The button is still pressed. Shutting down" << endl;
+
 				// Blink the LED
 				for (int i = 0; i < BLINK_COUNT; i++)
 				{
@@ -48,6 +52,11 @@ int main()
 				// Shutdown the system
 				system("poweroff");
 				return 0;
+			}
+			else
+			{
+				cout << "Button released. Waiting again for the user to press "
+					 << "the shutdown button" << endl;
 			}
 		}
 
