@@ -21,7 +21,7 @@ TODO explanation. txd on only if serial enabled. command for enabling serial ( `
 
 ## Compiling
 
-> **Note**: these instructions are useful if you want to compile the software manually, but you don't necessarily have to. If you just want to install it on your Raspberry Pi, then go to the [Installation](#installation) section.
+> **Note**: these instructions are useful if you want to compile *raspi-safe-shutdown* manually, but you don't necessarily have to. If you just want to install it on your Raspberry Pi, then go to the [Installation](#installation) section.
 
 > **Note**: this has been tested on a fresh installation of [**Raspberry Pi OS Lite**](https://www.raspberrypi.org/software/operating-systems/).
 
@@ -54,13 +54,15 @@ The result of the compilation is the `raspi-safe-shutdown` executable file.
 
 ## Installation
 
-TODO
+> :warning: **Warning**: Always examine scripts downloaded from the internet before running them locally.
 
-TODO Warning: Always examine scripts downloaded from the internet before running them locally.
+To install *raspi-safe-shutdown* into your Raspberry Pi, connect it to the internet and execute the following command:
 
 ```bash
-./install.sh
+curl -sSL https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/get.sh | sudo bash
 ```
+
+This will automatically download the latest version of this software and install a **systemctl** service for running it in the background.
 
 ## Demo
 
@@ -70,11 +72,3 @@ Demonstration video:
     <source src="demo.mp4">
     <a href="https://dmotte.github.io/raspi-safe-shutdown/#demo" target="_blank">Watch it on GitHub Pages</a>
 </video>
-
----
-
-TODO
-
-```bash
-sudo apt-get update && sudo apt-get install wiringpi
-```
