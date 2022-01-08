@@ -2,7 +2,7 @@
 
 set -e
 
-cd $(dirname "$0")
+cd "$(dirname "$0")"
 
 # Bash script to install or update raspi-safe-shutdown via web
 
