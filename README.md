@@ -1,8 +1,8 @@
 # raspi-safe-shutdown
 
-![](icon-128.png)
+![icon](icon-128.png)
 
-Simple daemon service application for *Raspberry Pi* to handle a **safe shutdown button** with an indicator LED.
+Simple daemon service application for _Raspberry Pi_ to handle a **safe shutdown button** with an indicator LED.
 
 :information_source: This has been tested on a **Raspberry Pi 3 B**, but may also work with other versions of the board.
 
@@ -27,7 +27,7 @@ The ideal scenario is therefore the following:
 - The **red LED** (optional) should be connected to **3v3**
   - it is ON when the board is powered, even if the OS is not running
 - The **yellow LED** should be connected to the `GPIO_GEN1` pin (`BCM #18`)
-  - it is the indicator LED for the *raspi-safe-shutdown* application
+  - it is the indicator LED for the _raspi-safe-shutdown_ application
 - The **green LED** (optional) should be connected to the `UART0_TXD` pin (`BCM #14`)
   - it is ON only when the operating system is up and running
 
@@ -49,7 +49,7 @@ sudo reboot
 
 > :warning: **Warning**: Always examine scripts downloaded from the internet before running them locally.
 
-To install or update *raspi-safe-shutdown* into your Raspberry Pi, connect it to the internet and execute the following command:
+To install or update _raspi-safe-shutdown_ into your Raspberry Pi, connect it to the internet and execute the following command:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/get.sh | sudo bash
@@ -59,7 +59,7 @@ This will automatically download the latest version of this application and inst
 
 ## Compiling
 
-> **Note**: these instructions are useful if you want to compile *raspi-safe-shutdown* manually, but you don't necessarily have to. If you just want to install it on your Raspberry Pi, then go to the [Installation](#installation) section.
+> **Note**: these instructions are useful if you want to compile _raspi-safe-shutdown_ manually, but you don't necessarily have to. If you just want to install it on your Raspberry Pi, then go to the [Installation](#installation) section.
 
 > **Note**: this has been tested on a fresh installation of [**Raspberry Pi OS Lite**](https://www.raspberrypi.org/software/operating-systems/).
 
@@ -75,7 +75,7 @@ Install **Git** and the **WiringPi** library:
 sudo apt install git wiringpi
 ```
 
-Clone this repo to your *Raspberry Pi* device and `cd` into the folder:
+Clone this repo to your _Raspberry Pi_ device and `cd` into the folder:
 
 ```bash
 git clone https://github.com/dmotte/raspi-safe-shutdown.git
