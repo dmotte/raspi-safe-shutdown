@@ -82,7 +82,7 @@ git clone https://github.com/dmotte/raspi-safe-shutdown.git
 cd raspi-safe-shutdown
 ```
 
-Compile the `main.cpp` file with the **G++** compiler:
+Compile the [`main.cpp`](main.cpp) file with the **G++** compiler:
 
 ```bash
 g++ -Wall -o raspi-safe-shutdown main.cpp -lwiringPi
