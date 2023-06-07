@@ -56,36 +56,3 @@ curl -sSL https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/get.
 ```
 
 This will automatically download the latest version of this application and install a **systemctl** service for running it in the background.
-
-## Compiling
-
-> **Note**: these instructions are useful if you want to compile _raspi-safe-shutdown_ manually, but you don't necessarily have to. If you just want to install it on your Raspberry Pi, then go to the [Installation](#installation) section.
-
-> **Note**: this has been tested on a fresh installation of [**Raspberry Pi OS Lite**](https://www.raspberrypi.org/software/operating-systems/).
-
-First of all, update the APT package lists:
-
-```bash
-sudo apt update
-```
-
-Install **Git** and the **WiringPi** library:
-
-```bash
-sudo apt install git wiringpi
-```
-
-Clone this repo to your _Raspberry Pi_ device and `cd` into the folder:
-
-```bash
-git clone https://github.com/dmotte/raspi-safe-shutdown.git
-cd raspi-safe-shutdown
-```
-
-Compile the [`main.cpp`](main.cpp) file with the **G++** compiler:
-
-```bash
-g++ -Wall -o raspi-safe-shutdown main.cpp -lwiringPi
-```
-
-The result of the compilation is the `raspi-safe-shutdown` executable file.
