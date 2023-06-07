@@ -4,7 +4,7 @@ Description=raspi-safe-shutdown
 [Service]
 Type=simple
 User=root
-ExecStart=/usr/bin/python3 /opt/raspi-safe-shutdown.py
+ExecStart=/usr/bin/python3 -u /opt/raspi-safe-shutdown.py
 
 [Install]
 WantedBy=multi-user.target
