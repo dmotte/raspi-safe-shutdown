@@ -11,7 +11,7 @@ apt-get update
 apt-get install -y python3-rpi.gpio
 
 echo 'Downloading the raspi-safe-shutdown.service unit file'
-curl -Lo /etc/systemd/system/raspi-safe-shutdown.service \
+curl -fsSLo /etc/systemd/system/raspi-safe-shutdown.service \
     https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/raspi-safe-shutdown.service
 systemctl daemon-reload
 
@@ -19,7 +19,7 @@ echo 'Stopping the raspi-safe-shutdown service (if running)'
 systemctl stop raspi-safe-shutdown
 
 echo 'Downloading the raspi-safe-shutdown script'
-curl -Lo /opt/raspi-safe-shutdown.py \
+curl -fsSLo /opt/raspi-safe-shutdown.py \
     https://raw.githubusercontent.com/dmotte/raspi-safe-shutdown/main/raspi-safe-shutdown.py
 chmod +x /opt/raspi-safe-shutdown.py
 
