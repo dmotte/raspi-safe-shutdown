@@ -6,16 +6,13 @@ Simple daemon service application for _Raspberry Pi_ to handle a **safe shutdown
 
 :information_source: This has been tested on a **Raspberry Pi 3 B**, but may also work with other versions of the board.
 
-:warning: **Disclaimer**: I am not responsible for any possible damage you may cause to your boards.
+:warning: **Disclaimer**: I am not responsible for any possible damage caused to your boards.
 
 ## Demo
 
-Demonstration video:
+Demonstration video ([`demo.mp4`](demo.mp4)):
 
-<video width="100%" controls>
-    <source src="demo.mp4">
-    <a href="https://dmotte.github.io/raspi-safe-shutdown/#demo" target="_blank">Watch it on GitHub Pages</a>
-</video>
+https://github.com/dmotte/raspi-safe-shutdown/assets/37443982/35166313-a215-428b-8f3d-e16d141151af
 
 ## Circuit
 
