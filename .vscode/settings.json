@@ -1,5 +1,0 @@
-{
-  "files.associations": {
-    "*.service": "ini" // A sort of syntax highlighting for systemd service files
-  }
-}
